@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Matrimony</string>
+    <string name="my_matches">My Matches</string>
+    <string name="_8_profiles_pending_with_me">8 Profiles pending with me </string>
+    <string name="_5_new">5 new</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="daily_recommendations">Daily Recommendations</string>
+    <string name="verified">Verified</string>
+    <string name="premium_nri">Premium NRI</string>
+    <string name="shortlist">Shortlist</string>
+    <string name="like_her">Like her ?</string>
+    <string name="_1_4">1 / 4</string>
+</resources>

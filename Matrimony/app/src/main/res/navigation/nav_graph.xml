@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.matrimony.ui.component.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment">
+
+            <argument
+                android:name="profileDetails"
+                app:argType="com.example.matrimony.model.Profile" />
+
+        </action>
+        <action
+            android:id="@+id/action_homeFragment_to_GestureFragment"
+            app:destination="@id/GestureFragment">
+            <argument
+                android:name="profileDetails"
+                app:argType="com.example.matrimony.model.Profile" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.matrimony.ui.component.profile.ProfileFragment"
+        android:label="ProfileScreen" />
+
+    <fragment
+        android:id="@+id/GestureFragment"
+        android:name="com.example.matrimony.ui.component.gesture.GestureFragment"
+        android:label="GestureScreen" />
+
+</navigation>
