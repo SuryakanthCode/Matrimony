@@ -1,13 +1,14 @@
 package com.example.matrimony.di
 
 import android.app.Application
+import android.content.Context
 import androidx.room.Room
+import com.example.matrimony.data.db.ProfileDao
 import com.example.matrimony.data.db.ProfileDatabase
-import com.example.matrimony.data.repo.ProfileRepository
-import com.example.matrimony.data.repo.ProfileRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
@@ -17,18 +18,16 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideProfileDatabase(app: Application): ProfileDatabase {
+    fun providesProfileDatabase(@ApplicationContext context: Context): ProfileDatabase {
         return Room.databaseBuilder(
-            app,
+            context,
             ProfileDatabase::class.java,
             ProfileDatabase.DATABASE_NAME
         ).build()
     }
 
     @Provides
-    @Singleton
-    fun provideProfileRepository(db: ProfileDatabase): ProfileRepository {
-        return ProfileRepositoryImpl(db.profileDao)
+    fun providesProfileDao(db: ProfileDatabase): ProfileDao {
+        return db.profileDao()
     }
-
 }

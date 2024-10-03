@@ -9,7 +9,7 @@ import com.example.matrimony.model.Profile
 @TypeConverters(Converters::class)
 abstract class ProfileDatabase : RoomDatabase() {
 
-    abstract val profileDao: ProfileDao
+    abstract fun profileDao(): ProfileDao
 
     companion object {
         const val DATABASE_NAME = "profileDB"

@@ -8,7 +8,6 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.matrimony.R
-import com.example.matrimony.utils.clicklistener.OnSliderListener
 
 class CarouselAdapter(
     private val images: List<String>, private val context: Context

@@ -19,7 +19,7 @@ import com.example.matrimony.ui.MainViewModel
 import com.example.matrimony.utils.clicklistener.OnItemClickListener
 
 
-    class HomeFragment : Fragment(), OnItemClickListener {
+class HomeFragment : Fragment(), OnItemClickListener {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var homeAdapter: HomeAdapter
     private val viewModel: MainViewModel by hiltNavGraphViewModels(R.id.my_graph)
@@ -67,6 +67,6 @@ import com.example.matrimony.utils.clicklistener.OnItemClickListener
         val bundle = Bundle()
         bundle.putParcelable("profileItem", profile)
         val action = R.id.action_homeFragment_to_profileFragment
-        findNavController().navigate(action,bundle)
+        findNavController().navigate(action, bundle)
     }
 }

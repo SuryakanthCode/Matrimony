@@ -25,7 +25,7 @@ import com.yuyakaido.android.cardstackview.SwipeableMethod
 class GestureFragment : Fragment(R.layout.fragment_gesture), OnItemClickListener {
 
     private lateinit var binding: FragmentGestureBinding
-    internal val viewModel: MainViewModel by hiltNavGraphViewModels(R.id.my_graph)
+    private val viewModel: MainViewModel by hiltNavGraphViewModels(R.id.my_graph)
     private lateinit var profileDetails: List<Profile>
     private lateinit var cardStackManager: CardStackLayoutManager
     private lateinit var stackCardAdapter: CardPagerAdapter

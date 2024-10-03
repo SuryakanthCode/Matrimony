@@ -11,9 +11,8 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.matrimony.R
 import com.example.matrimony.databinding.FragmentProfileBinding
 import com.example.matrimony.model.Profile
-import com.example.matrimony.utils.clicklistener.OnSliderListener
 
-class ProfileFragment : Fragment(), OnSliderListener {
+class ProfileFragment : Fragment() {
     private lateinit var binding: FragmentProfileBinding
     private lateinit var profileImageUri: List<String>
 
@@ -46,8 +45,5 @@ class ProfileFragment : Fragment(), OnSliderListener {
                     ((binding.viewPager.currentItem + 1).toString() + " / " + profileImageUri.size.toString())
             }
         })
-    }
-
-    override fun onSlidePosition(position: Int) {
     }
 }
